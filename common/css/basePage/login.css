@@ -1,0 +1,63 @@
+input,button{outline:none;}
+.loginBg{
+    height:0px;width:100%;padding-top:53.33333%;
+    background:url(../../images/basePage/log-background@3x.png) no-repeat;
+    background-position:center center;
+    background-size:100% ;
+}
+.loginBox{
+    width:89.33333%;margin:auto;
+    position:relative;top:-20vw;
+}
+.loginBox ul{
+    background:#fff;border-radius:10px;
+    padding:0 4.26666vw;
+}
+.loginBox li{
+    display:flex;
+    align-items: center;
+    height:20vw;
+}
+.loginBox li:nth-child(1){
+    border-bottom:1px solid #dedede;
+}
+.loginBox li:nth-child(2){
+    border-bottom:1px solid #dedede;
+}
+/*.loginBox li span{
+    height:90%;border:0px; padding-left:2.66666vw;
+}*/
+.loginBox li input{
+    flex:1;
+    height:90%;border:0px; padding-left:2.66666vw;
+}
+.loginBox li span:nth-child(1){
+    color:#68737f;font-size:0.3rem;
+}
+.loginBox li span.empty{
+    padding:2vw;
+    background:url('../../images/basePage/close@3x.png');
+    background-size:100% 100%;margin-left:2.666vw;
+}
+.loginBox li span.showPassword{
+    padding:2vw;
+    background:url('../../images/basePage/eye@3x.png') no-repeat;
+    background-size:100%;
+    background-position:center center;
+}
+.loginBox li span.hidePassword{
+    padding:2vw;
+    background:url('../../images/basePage/eye-closed@3x.png') no-repeat;
+    background-size:100%;
+    background-position:center center;
+}
+.submitLogin{
+    width:89.33333vw;margin:auto;padding-top:12.26666vw;
+}
+.submitLogin button{
+    width:100%;height:11.733333vw;
+    border:0px;
+    background: linear-gradient(to right, #44a3d5,#316fe0);
+    border-radius:11.733333vw;
+    color:#fff;font-size:0.3rem;
+}

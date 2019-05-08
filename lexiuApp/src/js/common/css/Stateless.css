@@ -1,0 +1,87 @@
+.CarLists{
+    margin:2.666vw 3.3333vw;
+    margin-bottom:0vw;
+    padding-left:7.3333vw;
+    position:relative;
+}
+
+.carListContent{
+    padding:3.3333vw 0;
+    padding-left:9.6666vw;
+    box-shadow: 0px 0px 4px #B0BEBF;
+    background:#fff;color:#333;line-height:0.4rem;
+    font-size:0.25rem;
+}
+.carListContent h4{
+    font-size:0.35rem;padding-bottom:0.1rem;font-weight:600;
+}
+.carListContent p{
+    display:flex;
+}
+.carListContent p span:nth-child(2){flex:1}
+.carListTime{
+    color:#989a9f;
+    margin-top:0.1rem;padding-top:0.2rem;
+    border-top:1px solid #e2e2e2;
+}
+.icom{
+    position:absolute;left:0px;background:#408afa;top:3.3333vw;
+    width:14.666vw;text-align:center;display:block;color:#fff;
+
+}
+.icom.JC{padding:0.1rem 0; border-radius:6px;}
+.icom.CK{
+    height:14.666vw;background:url('../../../img/newImg/readyGs@3x.png');
+    background-size:100% 100%;
+}
+.icom.WX{
+    height:14.666vw;background:url('../../../img/newImg/readyXl@3x.png');
+    background-size:100% 100%;
+}
+.icom.WC{
+    height:14.666vw;background:url('../../../img/newImg/readyOut@3x.png');
+    background-size:100% 100%;
+}
+
+.noRead{
+    position:absolute;
+    right:0.2rem;top:0.2rem;
+    display:block;padding:0.1rem;border-radius:100%;background:red;
+}
+/*扫码成功*/
+.SSOK{
+    width:100%;height:100%;background:#5f97ff;
+    position:fixed;left:0px;top:0px;z-index:9999;
+    text-align:center;padding-top:30%;color:#fff;
+}
+.gogoStyle{
+    display:inline-block;width:2.5rem;height:2rem;
+    background:url(../../../img/newImg/gougou.png);
+    background-size:100% 100%;margin-bottom:1rem;
+}
+.buttomStyle{
+    margin-top:3rem;
+}
+.buttomStyle button{
+    padding:0.2rem 0.7rem;background:#fff;border:0px;border-radius:0.3rem;
+    color:#5f97ff;
+}
+.buttomStyle >div{
+    display:flex;margin-top:1rem;
+}
+.buttomStyle >div span{
+    flex:1;font-weight:300;
+}
+
+.CaiLists{
+    margin:2.666vw 3.3333vw;
+    margin-bottom:0vw;
+    position:relative;
+}
+.caiListContent{
+    padding:3.3333vw 0;
+    padding-left: 0.3rem;
+    box-shadow: 0px 0px 4px #B0BEBF;
+    background:#fff;color:#333;line-height:0.4rem;
+    font-size:0.25rem;
+}

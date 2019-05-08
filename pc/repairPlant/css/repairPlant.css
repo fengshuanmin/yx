@@ -1,0 +1,108 @@
+.amap-logo{display:none;}
+.plantTop{
+    width:100%;background:linear-gradient(#35a1f2, #186dcd);
+    overflow:hidden;position:relative;padding-bottom:3vw;
+}
+.plantTop >*{position:relative;z-index:99;}
+.plantTop:after{
+    content:'';
+    display:block;width:100%;height:300vw;position:absolute;left:40%;background:#fff;top:0px;
+    transform: rotate(-42deg);
+    transform-origin: 0% 0%;
+    z-index:0;
+}
+.plantTop:before{
+    content:'';
+    display:block;width:100%;height:300vw;position:absolute;
+    left:-40%;background:#fff;bottom:0px;
+    transform: rotate(70deg);
+    transform-origin: 0% 100%;
+    z-index:0;
+}
+.plantTop .logo{padding:4vw;}
+.plantTop .logo img{width:20vw;}
+.BXGSList{
+    margin-top:0vw;
+}
+.BXGSList ul{width:96vw;padding:0 2vw;display:flex; flex-wrap: wrap;align-content: space-between;justify-content: space-between;}
+.BXGSList ul li{height:30px;text-align:center;}
+.BXGSList ul li img{height:100%;}
+
+.xlcMap{text-align:center;}
+.xlcMap h2{font-size:16px;line-height:40px;border-bottom:2px solid #fff;color:#fff;display:inline-block;}
+.xlcInfo{
+    margin:2vw;border-radius:6px;
+    box-shadow:2px 0px 30px rgba(176, 196, 208, 0.54);
+    background:#fff;padding:2vw;overflow:hidden;
+}
+.xlcInfo .map{width:70vw;height:50vw;background:#ccc;float:left;border-radius:6px;overflow:hidden;z-index:999;}
+.icoI{overflow:inherit}
+.icoI img{
+    display:none;
+}
+.icoI span.icoSpan{
+    border-radius:100%;
+    width:22px;height:22px;background:#3385ff;border:4px solid #fff;position:relative;
+}
+.xlcInfo .xlcInfobutton{
+    width:20vw;float:right;text-align:center;height:50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.xlcInfo .xlcInfobutton >div{
+    flex:1;
+}
+.xlcInfo .xlcInfobutton >div span:nth-child(1){
+    display:inline-block;text-align:center;font-size:9vw;width:17vw;height:17vw;
+    background:#2d84dd;margin:1vw 0;line-height:17vw;position:relative;color:#fff;
+    border-radius:6px;
+}
+.xlcInfo .xlcInfobutton > div span:nth-child(2){font-size:13px;display:block;}
+.BigGiftBag img{
+    width:100%;
+}
+.BigGiftBag{
+    position:relative;
+}
+.BigGiftBag .tishis{
+    position:absolute;width:95vw;bottom:100%;background:#fff;z-index:9999;margin-top:-25px;
+    left:2.5vw;border-radius:10px;padding:4vw;box-shadow:0px 0px 39px rgba(105, 100, 100, 0.61);
+    font-size:3vw;
+}
+.BigGiftBag .tishis:after{
+    position:absolute;top:100%;left:60%;width:30px;height:30px;display:block;content:'';
+    transform:rotate(45deg);background:#fff;margin-top:-30px
+}
+.BigGiftBag .tishis h4{text-align:center;font-size:4vw;}
+.BigGiftBag .tishis p{position:relative;z-index: 9999;line-height:6vw;font-size:3.5vw;}
+.BigGiftBag .tishis p span.span1{font-weight:bold;}
+/**修理厂实景**/
+.xlcScenery h2{
+    padding:2vw;font-size:16px;text-align:center;color:#4298e2;
+}
+.xlcScenery ul.jieche{
+    display:flex;width:100%;justify-content: center;flex-wrap:wrap;
+    padding-bottom:20px;
+}
+.xlcScenery ul.jieche li{
+    padding:6px 10px;background:#5f85e6;margin:5px 5px;border-radius:6px;color:#fff;
+    font-size:13px;
+}
+.imgList{padding:10px 4vw;overflow:hidden;}
+.imgList li{
+    float:right;width:30vw;height:21vw;background:#f2f2f2;
+}
+.imgList li:nth-child(2){margin-bottom:0.6vw;}
+.imgList li:nth-child(1){
+    float:left;width:57.3333vw;height:42.6666vw;
+}
+.pingfen{text-align:center;}
+.pingfen span{
+    display:inline-block;margin:5px;
+    width:24px;height:24px;
+    background:url('../images/xing.png');
+    background-size:100% 100%;
+}
+
+.ourPromise img{width:100%;}

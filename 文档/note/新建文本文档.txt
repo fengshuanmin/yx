@@ -1,0 +1,30 @@
+
+
+
+ cd  /usr/local/server/
+
+
+到根目录中  cd ~
+
+
+rz  rar上传文件根目录
+
+
+rar  x server.rar   ===>  server解压
+
+gunzip 111.tar.gz	
+tar xvf 111.tar		
+
+
+mv  server  /usr/local/server  移动到server
+
+
+
+
+rm -rf www 删除
+
+mkdir xxx 创建文件夹
+
+
+
+git clone -b master（分支名称） .git名称（克隆生产环境的）

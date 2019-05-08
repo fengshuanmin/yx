@@ -1,0 +1,83 @@
+.IntegralRecord{
+    background-color: white;
+    /*height: 100%;*/
+    width: 100%;
+}
+.integralTitle{
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .4rem;
+}
+.integralContext{
+    position: relative;
+    height: auto;
+}
+.integralContext .contextLeft{
+    width: 16%;
+    display: inline-block;
+    position: absolute;
+    top:.24rem;
+    left: 0;
+}
+.contextRight{
+    width: 88%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+/*.contextLeft .leftSmall{*/
+    /*margin-top: .1rem;*/
+/*}*/
+.contextLeft .leftSmall:first-child{
+    /*margin-top: .4rem;*/
+}
+.contextLeft .leftCircle{
+    height: 14px;
+    width: 14px;
+    margin: 4px auto;
+}
+.contextLeft .leftLine{
+    width: 1px;
+    border-right: 1px solid #dee2e7;
+    height: .4rem;
+    margin: 0 auto;
+}
+.IntegralRecord .rightBlock{
+    line-height: 20px;
+    padding: .24rem 0;
+    font-size: .28rem;
+    border-bottom: 1px solid #dee2e7;
+    position: relative;
+}
+.IntegralRecord .rightBlock:last-child{
+    border: none;
+}
+.IntegralRecord .rightBlock .blockNew{
+    position: absolute;
+    left:0;
+    top:.08rem;
+    height: .3rem;
+    width: .4rem;
+}
+.IntegralRecord .blockTime{
+    font-size: .24rem;
+    float: right;
+    color: #999;
+    clear: both;
+    /*line-height: .3rem;*/
+    text-align: right;
+    width: auto;
+    margin-right: .3rem;
+    display: inline-block;
+}
+.rightBlock .blockText .blockTrue{
+    display: inline-block;
+    padding:0 .3rem;
+}
+.IntegralRecord .checkMore{
+    text-align: center;
+    padding: .3rem 0;
+    clear: both;
+}

@@ -1,0 +1,24 @@
+.cx{
+    padding:0.05rem 0.2rem;
+    border-radius: 0.05rem;
+    margin-right:0.2rem;
+    z-index:2222222;
+}
+.cxborder{
+    border: 1px solid #5398FC;
+    background: #EDF4F5;
+    color: #5398FC;
+}
+.cxbord{
+    border:1px solid #ddd;
+}
+.fdj .baseLi .style1 .LiTRight{
+    border-top:0.02rem solid #f0f0f0;
+}
+.datelj .BaseTitle h4{
+    color:#757575;
+}
+.datelj .DetailedList li{
+    margin-bottom: 0!important;
+    border-bottom: 0.01rem solid #ccc;
+}

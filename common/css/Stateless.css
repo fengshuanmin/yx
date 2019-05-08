@@ -1,0 +1,228 @@
+.headerInfoStyle{
+    margin-bottom:0.3rem;
+}
+.headerInfoStyle li{
+    display: flex;
+    align-items: center;
+    font-size: 0.4rem;
+    padding: 0.2rem 4%;
+    background: #fff;
+}
+.headerInfoStyle li>span{
+    flex:1;
+}
+.headerInfoStyle li span.img{
+    flex:none;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin: 0.1rem 0rem;
+    margin-right: 0.3rem;
+}
+.headerInfoStyle li span.img img{    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+
+/**li list*/
+.baseLi{
+    /*margin-bottom:0.3rem;*/
+}
+
+.baseLi .style1{
+    padding-left:4%;
+    background:#fff;
+    display: flex;
+    align-items: center;
+    /*display:flex;height:1rem;
+    align-items: center;*/
+}
+.baseLi .style1 span.icon{
+    display:block;
+    margin-right:0.3rem;
+    font-size:0.4rem;
+    width:0.4rem;
+}
+.baseLi .style1 .LiTRight{
+    flex:1;
+    height:100%;padding:0.2rem 0;
+    border-top:1px solid #f0f0f0;
+}
+.baseLi .style1 .LiTRight >.onece{
+    height:100%;
+    flex:1;
+    display:flex;
+    align-items: center;
+}
+.baseLi .style1:nth-child(1) .LiTRight{border:0px;}
+.infotop .baseLi .style1:nth-child(1) .LiTRight{border-top:1px solid #f0f0f0;}
+span.listValue{
+    flex:1;
+}
+.mar_R03{
+    margin-right:0.3rem;
+}
+.junNum{
+    width:0.25rem;height:0.25rem;text-align:center;
+    border-radius:100%;background:red;color:#fff;
+}
+.LValue{
+    margin-right:4%;
+    color:#999;
+}
+.routerContainer>div>div>div>div:nth-of-type(2) .baseLi .style1 .LiTRight .onece .LValue{
+    color: #3a97F7;
+}
+.routerContainer>div>div>div>button{
+    font-size:16px;
+}
+.routerContainer>div>div>div>div>ul>li:nth-of-type(3)>span>input{
+    font-family: '微軟雅黑';
+    font-size:13px;
+}
+.routerContainer>div>div>div>div>div>ul:nth-of-type(2)>li:nth-of-type(1)>span:nth-of-type(2)>input{
+    text-align: center;
+    border-radius: 0.07rem;
+    margin-top:0.02rem;
+}
+/**模态蒙层**/
+.MoTai{
+    position:fixed;width:100%;height:100%;top:0px;left:0px;
+    background:rgba(0,0,0,0.4);
+    z-index:9999;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.MoTai >div{
+    display:inline-block;
+    margin:auto;
+}
+/*关闭*/
+.closeAll{
+    display:inline-block;
+    margin-top:0.5rem;
+    padding:0.3rem;
+    color:#f2f5f8;font-size:1rem;
+}
+
+.SetUpbutton{
+    background:#fff;text-align:center;position:relative;margin-top:1rem;
+}
+.SetUpbutton button{
+    width:100%;height:100%;background:none;padding:0.3rem 4%;
+    border:0px;font-size:0.35rem;color:#f95355;font-weight:600;
+    outline: none;
+}
+
+.SSOK{
+    width:100%;height:100%;background:#5f97ff;
+    position:fixed;left:0px;top:0px;z-index:9999;
+    text-align:center;padding-top:30%;color:#fff;
+}
+.gogoStyle{
+    display:inline-block;width:2.5rem;height:2rem;
+    background:url(../images/gougou.png);
+    background-size:100% 100%;margin-bottom:1rem;
+}
+.buttomStyle{
+    margin-top:3rem;
+}
+.buttomStyle button{
+    padding:0.2rem 0.7rem;background:#fff;border:0px;border-radius:0.3rem;
+    color:#5f97ff;
+}
+.buttomStyle >div{
+    display:flex;margin-top:1rem;
+}
+.buttomStyle >div span{
+    flex:1;font-weight:300;
+}
+
+.BaseTitle{
+    display:flex;
+    align-items: center;
+    padding:0.2rem 4%;
+}
+.BaseTitle h4{
+    font-size: 0.3rem;font-weight:600;flex:1;
+}
+.BaseTitle h4.L{
+    padding-left:5px;
+}
+
+.selectInput{
+    width:100%;height:1rem;padding:0.15rem 0.2rem;background:#f5f5f5;
+    display:flex;align-items:center;color:#666;z-index:900;
+    position:relative;padding-bottom:0px;
+}
+.inputT{
+    flex:1;background:#FFF;display:flex;align-items: center;border-radius:1rem;
+    height:100%;overflow:hidden;
+}
+.inputT span{padding:0 0.3rem;font-size:20px;}
+.inputT input{flex:1;border:0px;height:100%;}
+.selectInput span.Close{
+    padding:0 10px;color:#666;
+}
+.buttonRight{
+    height:0.5rem;border-radius:0.5rem;margin:0 0.2rem;background:#5a8cf2;text-align:center;
+    display:flex;align-items: center;color:#fff;min-width:1rem;margin-left:0px;
+    justify-content:center;overflow:hidden;
+}
+.buttonRight.backImg{
+    background:none;
+    min-width:0.5rem;width:0.5rem;
+    background:url('../images/uploadImgIcon.png');
+    background-size:100% 100%;
+    border-radius:0px;
+}
+.switch{
+    display:none;
+}
+
+label{
+    position:relative;
+    display: block;
+    border-radius: 24px;
+    width:100px;
+    height: 40px;
+    cursor: pointer;
+}
+.labe{
+    content: '开启';
+    line-height:36px;
+    text-indent: 50px;
+    color:green;
+    display: block;
+    border-radius: 20px;
+    height: 36px;
+    -webkit-transition: all 0.3s ease;
+}
+.labe1{
+    content: '';
+    position: absolute;
+    top:0;
+    left:1px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.08);
+    -webkit-transition: all 0.3s ease;
+}
+.switch:checked~label:after{
+    margin-left: 60px;
+}
+
+.switch:checked~label:before{
+    background-color:green;
+    content: '关闭';
+    text-indent: 10px;
+    color:#fff;
+}
+.ajxxbj{
+    width:0.3rem;
+    height:0.3rem;
+    background:url('../images/det.png');
+    background-size: contain;
+}

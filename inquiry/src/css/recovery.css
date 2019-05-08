@@ -1,0 +1,92 @@
+.recoverList *{color:#000;}
+.recoverList nav{
+    height:12vw;
+}
+.recoverList nav div{
+    padding:4vw 10vw;width:100%;position:fixed;background:#fff;
+    top:0px;left:0px;display:flex;box-shadow: 1px -4px 14px rgba(197, 193, 193, 0.77);
+    z-index: 999;
+}
+.recoverList nav span{flex:1;text-align:center;}
+.recoverList nav i{
+    width:4vw;height:1px;background:#000;display:block;
+    position:absolute;bottom:2vw;left:0px;transition: left 500ms;border-radius:1px;
+}
+
+.orderUploadImg{
+    padding:4vw;
+}
+.orderUploadImg ul{display:flex;flex-wrap:wrap;margin-bottom:4vw;justify-content: space-between;}
+.orderUploadImg li{width:30vw;height:30vw;overflow:hidden;margin-bottom:4vw;line-height:30vw;text-align:center;font-size:50px}
+
+.cjChild span{border:1px solid #e9e9e9;padding:3px 10px;margin:0px 8px;border-radius:4px;}
+.cjChild span:nth-child(1){margin:0px;}
+
+/**询报价*/
+.addXBJ{
+    width:1.5rem;height:1.5rem;border-radius:100%;
+    background:url(../img/newAdd@3x.png);background-size:100% 100%;
+    position:fixed;bottom:1.5rem;right:0.5rem;border:0px;
+}
+
+/***/
+.SelectionPartsBox{
+    position:fixed;
+    top:0px;left:0px;width:100%;height:100%;background:#f9f9f9;
+    display:flex;flex-direction:column;
+}
+.SelectionParts{
+    position:relative;
+    top:0px;left:0px;width:100%;
+    display:flex;padding-bottom:1.5rem;flex:1;
+}
+
+.SelectionParts.selectItem{
+    display:block;overflow:hidden;background:#fff;
+}
+.SelectionParts.selectItem li{
+    background:#fff;border-bottom:1px solid #d5d5d5;
+    padding-left:0px;margin-left:0.2rem;border-radius:0px;
+    margin-right:0px;
+}
+
+
+.SelectionParts .left{
+    flex:1;background:#efeff5;min-height:100vh;
+}
+.SelectionParts .right{
+    flex:4;min-height:100%;
+}
+.SelectBottom{
+    height:1.5rem;width:100%;position:fixed;bottom:0px;left:0px;
+    z-index:1000;
+}
+.SelectBottom .button{
+    display:flex;height:100%;width:100%;align-items: center;
+    color:#fff;font-size:0.36rem;
+}
+.SelectBottom .button span:nth-child(1){
+    flex:1;background:#5a5a5a;height:100%;display:flex;align-items:center;
+    justify-content:center;
+}
+ .SelectBottom .button span.submit{
+     padding:0 30px;background:red;height:100%;display:flex;align-items:center;
+ }
+ .alreadyChoose{
+     position:absolute;bottom:100%;background:#fff;width:100%;overflow:hidden;
+     transition: height 500ms;
+ }
+ .alreadyChoose li.addAndClose{
+     margin:0px;background:#fff;padding-left:0px;margin-left:0.2rem;
+     border-bottom:1px solid #e9e9e9
+ }
+ .alreadyTitle{
+     height:0.9rem;background:#d5d5d5;display:flex;
+     padding:0 0.2rem;align-items: center;justify-content:space-between;
+     z-index:999;position:relative;
+ }
+ .paytop{
+     position:fixed;
+     top:0;
+     width:100%;
+ }

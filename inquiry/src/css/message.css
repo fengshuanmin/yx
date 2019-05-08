@@ -1,0 +1,25 @@
+.recordList .msgdiv{
+    width: 6.9rem;
+    margin: .15rem auto;
+    border:1px solid #E5E5E5;
+    /*min-height: 1.9rem;*/
+    background-color: #fff;
+    padding: 0.2rem;
+    border-radius: 0.15rem;
+    /*letter-spacing:0.1rem;*/
+    /*box-shadow: 0 0 0.08rem 0rem rgba(0,0,0,0.1);*/
+}
+.recordList .msgdiv a{
+    color: #BDBDBD;
+}
+.recordList .msgdiv a h2{
+    color: #000;
+}
+.recordList .msgli{
+    width: 100%;
+    margin: auto;
+    border:0;
+    min-height: 1.9rem;
+    background-color: #F5F5F5;
+    box-shadow: none;
+}

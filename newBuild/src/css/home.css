@@ -1,0 +1,168 @@
+.DSYHome ul li{
+    display:flex;align-items: center;font-size:0.4rem;
+    padding:0.2rem 2%;background:#fff;
+}
+.DSYHome ul li span:nth-child(2){
+    flex:1;
+}
+.DSYHome ul li span.img{
+    width:1.3rem; height:1.3rem;margin:0.1rem 0rem;margin-right:0.3rem;
+}
+.DSYHome ul li span p{font-size:0.25rem;line-height:0.6rem;}
+.DSYHome ul li span p >span{margin-right:0.3rem;}
+.DSYHome ul li span p >span >span{margin-right:0.1rem;}
+.DSYHome ul li span.img img{
+    width:100%;height:100%;border-radius:100%;
+}
+.shezhi{
+    padding:0.25rem 4%;background:#fff;margin-top:0.2rem;
+    font-size:0.3rem;display:flex;align-items: center;
+}
+.zp{
+    display:inline-block;
+    width:0.8rem;
+    height:0.8rem;
+    background-size: contain;
+}
+.shezhi span.iconfonts{
+    padding-right:0.2rem;color:#97989b;
+}
+
+/**SetUp设置*/
+.DSYHome .iconfonts{display:inline-block;width:0.6rem;font-size:0.4rem}
+.DSYHome ul.SetUpLi{
+    font-size:0.3rem;margin-top:0.5rem;
+}
+.DSYHome ul.SetUpLi li{font-size:0.3rem;padding:0.25rem 4%;border-top:1px solid #f0f0f0}
+.DSYHome ul.SetUpLi li span:nth-child(1){border-top:0px;flex:1;}
+.DSYHome ul.SetUpLi li span:nth-child(2){width:inherit;height:inherit;flex:inherit}
+
+.SetUpbutton{
+    background:#fff;text-align:center;position:relative;margin-top:1rem;
+}
+.SetUpbutton button{
+    width:100%;height:100%;background:none;padding:0.3rem 4%;
+    border:0px;font-size:0.35rem;color:#f95355;font-weight:600;
+    outline: none;
+}
+.icoLeft {
+    margin-top:0.2rem;
+}
+.DSYHome ul.icoLeft li{
+    font-size:0.3rem;padding:0rem 4%;
+    padding-right:0px;height:1rem;
+}
+.DSYHome ul.icoLeft li span.imgIcon{
+    display:inline-block;
+    width:0.5rem;height:0.5rem;margin-right:0.2rem;
+}
+ul.icoLeft li:nth-child(1) span.imgIcon{
+    background:url('../img/jb-1@3x.png');
+    background-size:100% 100%;
+}
+ul.icoLeft li:nth-child(2) span.imgIcon{
+    background:url('../img/information@3x.png');
+    background-size:100% 100%;
+}
+ul.icoLeft li:nth-child(3) span.imgIcon{
+    background:url('../img/news.png');
+    /*background:url('../img/message.png');*/
+    background-size:100% 100%;
+}
+.DSYHome ul.icoLeft li span.rightTopBorder{
+    border-top:1px solid #f0f0f0;height:100%;line-height:1rem;
+}
+.DSYHome ul.icoLeft li:nth-child(1) span.rightTopBorder{
+    border:0px;
+}
+/**关于**/
+.HomeLogoStyle{
+    padding:20% 35%;text-align:center;
+    padding-bottom:5%;
+}
+.HomeLogoStyle img{
+    width:100%;
+}
+.HomeLogoStyle span{
+    display:inline-block;
+    padding-top:10%;
+}
+
+
+/**修改密码**/
+.changePassword ul{
+    background:#fff;margin-top:0.4rem;
+}
+.changePassword ul li {
+    display:flex;align-items: center;
+    border-top:1px solid #f0f0f0;height:0.9rem;margin-left:0.2rem;
+}
+.changePassword ul li:nth-child(1){
+    border:0px;
+}
+.changePassword ul li input{
+    flex:1;border:0px;height:100%;padding-left:0.2rem;outline: none;
+}
+.buttonStyle{margin-top:1rem;text-align:center;}
+.buttonStyle input{
+    width:80%;padding:0.2rem 0;border-radius:6px;border:0px;background:#4d89f4;color:#fff;
+    font-size:0.35rem;outline: none;
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+
+    -webkit-appearance: none;
+
+}
+
+textarea {  -webkit-appearance: none;}
+
+
+/**费率介绍**/
+.defaultFlv{
+    width:70%;border-radius:6px;overflow:hidden;background:#fff;padding-bottom:0.2rem;
+}
+.defaultFlv >span{
+    display:block;width:100%;padding:0.15rem;
+    background:#548df5;text-align:center;color:#fff;
+}
+.defaultFlv ul li{
+    display:flex;line-height:0.6rem;
+}
+.defaultFlv ul li span{
+    flex:1;text-align:center;
+}
+.payspan{
+    display:inline-block;
+    width:0.4rem;
+    height:0.44rem;
+}
+.payspan .la{
+    float:right;
+    width:0.4rem;
+    height:0.4rem;
+    background:url('../img/checked.png');
+}
+.payspan .lab{
+    float:right;
+    width:0.4rem;
+    height:0.4rem;
+    background:url('../img/nochecked.png');
+}
+.saomiao{
+    background-image:url('../img/saomiao.png') ;
+    display:inline-block;
+    width:0.5rem;
+    height:0.5rem;
+    background-size: contain;
+}
+.onece>input{
+    font-size:0.26rem!important;
+}
+.ditu{
+    background-image:url('../img/map.png') ;
+    display:inline-block;
+    width:0.5rem;
+    height:0.5rem;
+    background-size: contain;
+}
+

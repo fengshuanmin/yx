@@ -1,0 +1,12 @@
+/**关于**/
+.HomeLogoStyle{
+    padding:20% 35%;text-align:center;
+    padding-bottom:5%;
+}
+.HomeLogoStyle img{
+    width:100%;
+}
+.HomeLogoStyle span{
+    display:inline-block;
+    padding-top:10%;
+}

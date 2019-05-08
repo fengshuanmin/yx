@@ -1,0 +1,68 @@
+.showBox *{font-size:12px;}
+.showBox input{outline:none}
+.showBox{
+    position:absolute;right:15px;top:15px;background:#fff;width:360px;
+    z-index:999;border-radius:10px;overflow:hidden;
+}
+.showBox input{
+    padding:0px;margin:0px;
+}
+.showBox .headers{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:5px 10px;
+    width:360px;
+    height: 45px;
+    background: #fff;
+    box-shadow: 0 2px 2px rgba(0,0,0,.15);
+    border-radius: 3px;
+}
+.showBox .headers input{height:100%;flex:1;border:0px;padding:0px 5px;}
+.headers >span{
+    margin:0 5px;font-size:12px;display:flex;align-items: center;color:#0e89f5;cursor:pointer;
+}
+.showBox .headers >span i{padding:5px;}
+.showBox .headers span.logo{
+    height:35px;width:35px;display:block;
+    background:url('../../../common/images/logoCar.png');
+    background-size:100% 100%;
+}
+.showBox .tbody p{text-align:center;line-height:50px;}
+.showBox .tbody{
+    max-height:80vh;overflow:auto;background:#fafafa;
+    transition: height 500ms;
+}
+.showBox .tbody::-webkit-scrollbar{
+    display:none;
+}
+
+
+/**修理厂详情**/
+.showBox  .MapXlicInfo{position:relative;}
+.showBox .MapXlicInfo .goBack{
+    font-size:12px;font-weight:400;position:absolute;top:10px; left:10px;
+    padding:5px 8px 5px 5px;background:rgba(0,0,0,0.3);border-radius:3px;
+    color:#fff;
+}
+.showBox img{border:0px;}
+.showBox .MXIHeader{position:relative;min-height:100px;}
+.showBox .imgBox{max-height:160px;overflow:hidden;}
+.showBox .MXIHeader img{
+    width:100%;
+}
+.showBox .Choice{
+    cursor:pointer;
+    display:inline-block;width:50px; height:50px;border-radius:100%;position:absolute;right:10px;
+    bottom:-25px;background:#0e89f5;line-height:50px;text-align:center;font-size:13px;color:#fff;
+}
+.showBox .select{
+    transform:rotate(0deg);
+    transition: transform 500ms;
+}
+.showBox .amap-sug-result{z-index:9999;}
+
+.showBox .MXIInfo{padding:15px;background:#fff;}
+.showBox h3.titles{font-weight:400;font-size:15px;line-height:30px;}
+.showBox .MXIInfo p{line-height:30px;text-align:left;font-size:12px;color: #666;}
+.showBox .MXIInfo p i{padding-right:5px;}

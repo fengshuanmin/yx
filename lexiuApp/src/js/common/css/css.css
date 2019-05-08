@@ -1,0 +1,13 @@
+.carListHeader{
+    padding:0.5rem;
+}
+.carListBox{
+    width:100%;text-align:center;padding:0.3rem 0;background:#fff;position:fixed;top:0px;left:0px;z-index:999;
+}
+.carListHeader span{
+    padding:0px 0.3rem;font-size:0.3rem;color:#333;
+}
+.carListHeader span.heng{
+    display:block;border-top:1px solid #333;padding:0px;width:0.3rem;
+    position:absolute;left:0px;bottom:0.15rem;transition:left 900ms
+}

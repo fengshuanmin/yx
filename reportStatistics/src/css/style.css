@@ -1,0 +1,360 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,table,th,td,embed,object {
+    padding:0;
+    margin:0;
+}
+address,caption,cite,code,dfn,em,h1,h2,h3,h4,h5,h6,strong,th,var {
+    font-weight:normal;
+    font-style:normal;
+}
+@media screen and ( min-width:320px) {
+    html {
+        font-size:43px
+    }
+}@media screen and ( min-width:375px) {
+    html {
+        font-size:50px
+    }
+}@media screen and ( min-width:414px) {
+    html {
+        font-size:55.2px
+    }
+}@media screen and ( min-width:540px) {
+    html {
+        font-size:75px
+    }
+}@media screen and ( min-width:750px) {
+    html {
+        font-size:100px
+    }
+}ul,li {
+     list-style:none;
+ }
+h1,h2,h3,h4,h5,h6 {
+    font-size:1.0em;
+}
+img {
+    display:block;
+    border:0;
+}
+a {
+    text-decoration:none;
+}
+a:link {
+    text-decoration:none;
+}
+a:visited {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:none;
+}
+a:active {
+    text-decoration:none;
+}
+html {
+    -webkit-text-size-adjust:none;
+}
+body {
+    font-family:"微软雅黑";
+    font-size:.26rem;
+}
+* {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.clearfix {
+    *zoom:1;
+}
+.clearfix:after {
+    display:block;
+    content:"clear";
+    height:0;
+    clear:both;
+    overflow:hidden;
+    visibility:hidden;
+}
+@font-face {
+    font-family:'iconfont';
+    src:url('//at.alicdn.com/t/font_1474527211_186666.eot');
+    src:url('//at.alicdn.com/t/font_1474527211_186666.eot?#iefix') format('embedded-opentype'),url('//at.alicdn.com/t/font_1474527211_186666.woff') format('woff'),url('//at.alicdn.com/t/font_1474527211_186666.ttf') format('truetype'),url('//at.alicdn.com/t/font_1474527211_186666.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-stroke-width:0.2px;
+    -moz-osx-font-smoothing:grayscale;
+}
+.weui_toast_content {
+    position:absolute;
+    bottom:0;
+    margin:0 0 15px;
+    left:0;
+    right:0;
+}
+i.weui_icon_warn {
+    display:block;
+    margin-top:.5rem;
+}
+.Rcontainer {
+    padding:.3rem;
+    background-color:#F6F6F6;
+}
+.Rheader {
+    padding:.2rem .3rem;
+    background-color:#1e7be3;
+    text-align:center;
+    color:#fff;
+    font-size:.36rem;
+}
+.Rheader>span.headerBtn {
+    position:absolute;
+}
+.Rheader>span.headerBtn .iconfont {
+    font-size:.4rem;
+}
+.Rheader>span.headerBtn:nth-child(1) {
+    left:.3rem;
+    top:.2rem;
+}
+.Rheader>span.headerBtn:nth-last-child(1) {
+    right:.3rem;
+    top:.2rem;
+}
+.commPadding {
+    padding:.3rem;
+    border-bottom:1px solid #e7e7e7;
+}
+.form-input {
+    padding:.2rem .3rem;
+    font-size:.20rem;
+    max-width:2.3rem;
+    line-height:1;
+    color:#999999;
+    text-align:center;
+    background-color:#fff;
+    background-image:none;
+    border:1px solid #CCCCCC;
+    border-radius:6px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.loadMore {
+    padding:.3rem .1rem;
+    font-size:.4rem;
+    text-align:center;
+}
+.publicBtn {
+    background-color:#1E7BE3;
+    color:#ffffff;
+    font:.3rem/.6rem "PingFang-SC-Regular";
+    border:0;
+    outline:none;
+    border-radius:6px;
+    padding:0 .3rem;
+    margin-left:.4rem;
+}
+.loginForm {
+    padding:0 .4rem;
+    overflow:hidden;
+    background:-webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#e0e0e0));
+    z-index:10;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.logoItem {
+    width:1.8rem;
+    height:1.8rem;
+    background:url("../img/logo.png") no-repeat center center;
+    background-size:100% 100%;
+    margin:1.4rem auto;
+}
+.eleItem,.btnItem {
+    width:100%;
+    padding: .3rem 0 .2rem;
+    border-bottom:1px solid #d0d0d0;
+    vertical-align:middle;
+}
+.eleItem label {
+    margin-left:.3rem;
+    margin-right:.4rem;
+}
+.eleItem label span {
+    font-size:.4rem;
+    color:#8f8d8e;
+}
+.eleItem input {
+    border:0;
+    background-color:transparent;
+    height:.6rem;
+    font-size:.32rem;
+    width:80%;
+    color:#5a5655;
+    outline:none;
+}
+.btnItem {
+    border:0;
+    text-align:center;
+    margin-top:.7rem;
+}
+.btnItem button {
+    width:100%;
+    height:1.1rem;
+    border:0;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    background-color:#019cdc;
+    color:#ffffff;
+    font-size:.32rem;
+}
+.repairReport>p:nth-of-type(1),.repairStraight>p:nth-of-type(1) {
+    text-align:center;
+    font:.22rem/.7rem "微软雅黑";
+}
+.queryContainer {
+    display:flex;
+    padding:.2rem 0;
+}
+.queryContainer>span.zhi {
+    padding:0 .2rem;
+    line-height:.7rem;
+}
+.listContainer ul li.stacItem {
+    padding:.2rem;
+    background-color:#ffffff;
+    margin-bottom:.15rem;
+    border-radius:3px;
+    box-shadow:0 2px #e0e0e0;
+}
+.stacItem_left {
+    display:inline-block;
+    float:left;
+    margin-top:.25rem;
+    margin-bottom:.25rem;
+}
+.StacIcon {
+    display:inline-block;
+    width:.6rem;
+    height:.6rem;
+    background:green;
+    margin-right:.2rem;
+    margin-top:.15rem;
+    vertical-align:top;
+}
+.amount.StacIcon {
+    background:url("../img/sltj.png") no-repeat center center;
+    background-size:100% 100%;
+}
+.sum.StacIcon {
+    background:url("../img/jetj.png") no-repeat center center;
+    background-size:100% 100%;
+}
+.hzcspm.StacIcon {
+    background:url("../img/hzcsjcpm.png") no-repeat center center;
+    background-size:100% 100%;
+}
+.fhzcspm.StacIcon {
+    background:url("../img/fhzcsjcpm.png") no-repeat center center;
+    background-size:100% 100%;
+}
+.ajtjfxspm.StacIcon {
+    background:url("../img/ajtjfx01.png") no-repeat center center;
+    background-size:100% 100%;
+}
+.pjtjfxspm.StacIcon {
+    background:url("../img/pjtjfx02.png") no-repeat center center;
+    background-size:100% 100%;
+}
+.fqajzbspm.StacIcon {
+    background:url("../img/fqajzb03.png") no-repeat center center;
+    background-size:100% 100%;
+}
+.StacInfo {
+    display:inline-block;
+    color:#1C1B20;
+}
+.StacName {
+    font-size:.3rem;
+    font-weight:bold;
+}
+.StacList li {
+    float:left;
+    margin-right:.1rem;
+    color:#000;
+    opacity:.6;
+}
+.stacItem_right {
+    display:inline-block;
+    float:right;
+    color:#000;
+    font-size:.18rem;
+    opacity:.8;
+}
+.stacItem_right.stacItem_tr {
+    margin-top:.2rem;
+}
+.stacItem_right em {
+    font-size:.3rem;
+    opacity:1;
+    font-weight:bold;
+}
+.stacItem_right table tr td:nth-of-type(1) {
+    text-align:right;
+}
+.echartsContainer,.echartsContainers {
+    position:relative;
+    text-align:center;
+    display:none;
+    height:6rem;
+    border-top:1px solid #E0E0E0;
+    overflow:hidden;
+}
+.echartsContainer.EC5 {
+    height:5rem;
+}
+.reactEc {
+    width:96%;
+    margin:.6rem auto;
+    height:6rem;
+}
+.span_right {
+    display:inline-block;
+    float:right;
+}
+.table_straight {
+    padding-top:.25rem;
+}
+.clearfix em {
+    font-size:.3rem;
+}
+.CoRankingContainer {
+    text-align:center;
+    width:100%;
+    height:100%;
+}
+.CoRankingContainer button {
+    border:0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    width:40%;
+    margin:.2rem 5%;
+    outline:none;
+    padding:.1rem;
+    color:#ffffff;
+}
+.CoRankingContainer button:nth-of-type(1) {
+    background:#ffb980;
+}
+.CoRankingContainer button:nth-of-type(2) {
+    background:#5ab1ef;
+}

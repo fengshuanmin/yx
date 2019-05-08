@@ -1,0 +1,16 @@
+.Complementing{
+    background:#427FE2;
+    width:100%;
+    height: 100%;
+    position:absolute;
+}
+.complementingbody{
+    width: 94%;
+    margin:0.6rem 3%;
+    background: #fff;
+    border-radius: 0.1rem;
+}
+.tit{
+    background:#ccc;
+    padding:0.2rem
+}

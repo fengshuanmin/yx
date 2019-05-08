@@ -1,0 +1,106 @@
+input,button{outline:none;}
+.loginBg{
+    height:0px;width:100%;padding-top:53.33333%;
+    background:url(../img/basePage/bggg.png) no-repeat;
+    background-position:center center;
+    background-size:100% ;
+}
+.loginBox{
+    width:89.33333%;margin:auto;
+    position:relative;top:-20vw;
+}
+.loginBox ul{
+    background:#fff;border-radius:10px;
+    padding:0 4.26666vw;
+}
+.loginBox li{
+    display:flex;
+    align-items: center;
+    height:20vw;
+}
+
+.loginBox .forpsd .forgetpsd{
+    padding: 0.1rem;
+    color:#68737f;
+    float:right;
+}
+/*.loginBox li .label{
+    width:1.2rem;
+    height:90%;border:0px; padding-left:2.66666vw;
+}*/
+.loginBox li:nth-child(1){
+    border-bottom:1px solid #dedede;
+}
+.loginBox li input{
+    width:65%;
+    height:90%;border:0px; padding-left:2.66666vw;
+}
+.loginBox li .yzlab{
+
+}
+.loginBox li span:nth-child(1){
+    /*width:1.2rem;*/
+    width:20%;
+    color:#68737f;font-size:0.3rem;
+}
+.loginBox li .YZM{
+    width:2.2rem;
+    border:0;
+    background:none;
+    outline:none;
+}
+.loginBox li span.empty{
+    padding:2vw;
+    background:url('../img/basePage/close@3x.png');
+    background-size:100% 100%;margin-left:2.666vw;
+}
+.loginBox li span.showPassword{
+    padding:2vw;
+    background:url('../img/basePage/eye@3x.png') no-repeat;
+    background-size:100%;
+    background-position:center center;
+}
+.loginBox li span.hidePassword{
+    padding:2vw;
+    background:url('../img/basePage/eye-closed@3x.png') no-repeat;
+    background-size:100%;
+    background-position:center center;
+}
+
+.submitLogin{
+    width:89.33333vw;margin:auto;padding-top:12.26666vw;
+}
+.submitLogin button{
+    width:100%;height:11.733333vw;
+    border:0px;
+    background: linear-gradient(to right, #44a3d5,#316fe0);
+    border-radius:11.733333vw;
+    color:#fff;font-size:0.3rem;
+}
+.ptit{
+    color:#68737f;
+    position:fixed;
+    bottom: 0.6rem;
+    font-size: 0.30rem;
+    margin-left: 1.8rem;
+}
+.ptit .tit{
+    color:#0e89f5;
+}
+.YZMshow{
+    display:inline-block;
+}
+.YZMnone{
+    display:none;
+}
+.YZMtimershow{
+    display: inline-block;
+}
+.YZMtimernone{
+    display: none;
+}
+.ucss{
+    background:#fff;
+    padding:0.2rem 0.2rem 0;
+    margin-left:0;
+}

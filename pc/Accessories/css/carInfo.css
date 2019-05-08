@@ -1,0 +1,39 @@
+.carInfoStyle{
+    margin:20px;border:1px solid #e9672d;overflow:hidden;font-size:14px;color:#333;min-width:700px;
+}
+.offerListStyle{
+    margin:20px;border:1px solid #9350ad;overflow:hidden;font-size:14px;color:#333;min-width:700px;
+}
+.Ttitle{
+    width:100%;height:30px;background:#e9672d;line-height:30px;padding:0 10px;
+}
+.offerListStyle .Ttitle{background:#9350ad}
+.Ttitle H4{font-size:14px;color:#fff;line-height:30px;}
+
+.carInfoStyle ul:nth-of-type(1){width:40%;float:left;}
+.carInfoStyle ul:nth-of-type(2){width:60%;float:left;}
+.carInfoStyle ul li{
+    border-bottom:1px solid #ccc;
+    font-size:14px;color:#333;line-height:40px;padding:0 10px;
+}
+.carInfoStyle ul li span:nth-child(1){display:inline-block;width:100px;text-align:right;padding-right:10px;color:#777;}
+.carInfoStyle ul li:nth-child(1){border-top:1px solid #ccc;}
+.carInfoStyle ul:nth-child(1) li{border-left:1px solid #ccc}
+.carInfoStyle ul:nth-child(2) li{border-right:1px solid #ccc}
+.ntBox{padding:10px;overflow:hidden;}
+
+.offerListStyle ul.Utd{width:100%;display:flex;}
+.offerListStyle ul.Utd > li{flex:1;border:1px solid #ccc;border-left:0px;border-top:0px;text-align:center;line-height:30px;font-size:13px;}
+.offerListStyle ul.Utd > li:nth-child(1){border-left:1px solid #ccc;}
+.offerListStyle ul.Utr >li:nth-child(1) ul.Utd > li{border-top:1px solid #ccc;color:#333;}
+.offerListStyle ul.Utd > li:last-child span.gg{display:block;font-size:12px;cursor:pointer;color:red}
+.offerListStyle ul.Utd > li:last-child span.ggs{color:green}
+.offerListStyle ul.Utd > li:last-child:hover span.gg{
+    display:block;
+}
+
+.buttom{text-align:center;}
+.buttom span{margin:0 15px;padding:5px 10px;font-size:14px;border:1px solid #ccc;border-radius:5px;cursor:pointer;}
+
+
+

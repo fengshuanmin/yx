@@ -1,0 +1,482 @@
+.CKYButton{
+    display:flex;
+    align-items: center;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
+    position:fixed;
+    bottom:0px;left:0px;width:100%;
+}
+.CKYButton button{
+    flex:1;
+    padding:0.3rem 0;
+    border:0px;
+    color:#fff;
+    font-size:0.30rem;
+}
+.CKYButton button:nth-child(1){
+    background:#fff;
+    color:#000;
+}
+.CKYButton button:nth-child(2){
+    background:#ffa93a;
+}
+.CKYButton button:nth-child(3){
+    background:#ff4f4f;
+}
+.CKYButton button.onlyMe{background:linear-gradient(to right, #5295e8, #2684ed);color:#fff;}
+
+/*提示筐*/
+.PromptModality{
+    background:rgba(0,0,0,0.7);
+    position:fixed;
+    top:0px;left:0px;width:100%;height:100%;z-index:9999;
+    display: flex;
+    justify-content: space-between;
+}
+.PromptModality .PromBody{
+    width:70%;max-width:300px;margin:auto;
+    background:rgba(255,255,255,0.98);border-radius:8px;
+}
+.PromptModality .PromBody p.Promcontent{
+    padding:0.2rem;text-align:center;
+}
+.PromptModality .PromBody p.Promheader{
+    padding-top:0.2rem;text-align:center;
+    font-weight:600;font-size:0.30rem;
+}
+.PromptModality .PromBody .PromButton{
+    display:flex;
+    align-items: center;
+    border-radius:0px 0px 8px 8px;
+    overflow:hidden;
+}
+.PromptModality .PromBody .PromButton button{
+    flex:1;
+    border:0px;padding:0.2rem;
+    background:#fff;
+    border-right:1px solid #ccc;
+    border-top:1px solid #ccc;
+    color:#107edf;font-size:0.3rem;
+    outline:none;
+}
+.PromptModality .PromBody .PromButton button:nth-child(2){border-right:0px;}
+
+/*
+loading*/
+.loadings{animation:2s linear infinite CDturn;}
+@keyframes CDturn{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(-360deg)}
+}
+
+/*header*/
+.PublicHeader{
+    position:absolute;
+    left:0px;top:-0.7rem;
+    width:100%;padding:0rem 0.3rem;height:40px;line-height:40px;
+    text-align:right;background:#1E7BE3;z-index:-1;
+}
+.PublicHeader span{
+    margin-right:0.3rem;color:#fafafa;
+}
+
+
+/*
+积分样式*/
+.JFHTML{
+    display:inline-block;
+    width:1.2rem;text-align:center;
+    position:fixed;left:50%;margin-left:-30px;top:50%;z-index:9999;
+    transform: scale(0);
+    opacity: 0;
+    /*transition: all 2s;*!*/
+
+}
+@keyframes personslow {
+    0% {transform: scale(0);opacity: 0;}
+    40% {transform: scale(3);opacity: 1;}
+    60% {transform: scale(3);opacity: 1;}
+    100% {transform: scale(0);opacity: 0;}
+}
+.goudow{
+    color:orange;font-size:0.2rem;
+    transform: scale(0);
+    opacity: 1;
+    animation:personslow 2s infinite;
+    animation-iteration-count: 1;
+}
+
+/*乐车邦列表*/
+.MaintenanceRecord .order{
+    background: #fff;
+    margin-bottom: 0.3rem;
+    box-shadow: 0px 2px 5px 0px rgba(156, 156, 156, 0.29);
+}
+.MaintenanceRecord .order h4{
+    color: #000;
+    font-weight: 600;
+    font-size: 0.35rem;
+    padding: 0.3rem;
+    padding-bottom: 0px;
+}
+.MaintenanceRecord .order h4.leCheStyle span:nth-child(1){
+    background:url(../../../newBuild/src/img/logo@3x.png);display: inline-block;height:0.4rem;width:1.36901rem;
+    background-size:100% 100%;
+}
+.MaintenanceRecord .order h4.leCheStyle span:nth-child(2){
+    float:right;background:url(../../../newBuild/src/img/goweixiu@3x.png);display:inline-block;height:0.3rem;
+    width:1.1853658rem;background-size:100% 100%;margin-top:0.05rem;
+}
+.MaintenanceRecord .order h4.leCheStyle span:nth-child(2) a{
+    display:inline-block;width:100%;height:100%;
+}
+
+
+/*积分列表*/
+.Scoreboard{
+    padding:0.3rem;
+}
+.ScoreList{
+    display:flex;font-size:0.3rem;align-items: center;margin-bottom:0.4rem;
+}
+.ScoreList >span.img0{
+    background:url(../../../newBuild/src/img/BXGS1@3x.png);
+}
+.ScoreList >span.img1{
+    background:url(../../../newBuild/src/img/BXGS2@3x.png);
+}
+.ScoreList >span.img2{
+    background:url(../../../newBuild/src/img/BXGS3@3x.png);
+}
+.ScoreList >span:nth-child(1){
+    width:0.7rem;height:0.7rem;background-size:100% 100%;
+    margin-right:0.2rem;text-align:center;line-height:0.7rem;
+}
+.ScoreList >div{
+    flex:1;position:relative;padding-bottom:0.3rem;
+}
+.ScoreList >div p{
+    padding:0px;margin:0px;
+}
+.ScoreList >div >div{
+    /*display:inline-block;*/
+    position:absolute;bottom:-0.15rem;width:100%;
+}
+.ScoreList >div span{
+    display:inline-block;font-size:0.25rem;padding-left:0.2rem;
+}
+.ScoreList >div span.UpShow{
+    float:right;line-height:0.4rem;
+}
+.ScoreList >div i{
+    display:inline-block;height:0.13rem;border-radius:0.2rem;background:#bccfd8;
+    width:100%;float:left;max-width:100%;margin-top:0.1rem;position:relative;
+    font-style: inherit;
+}
+.ScoreList >div i >span{
+    position:absolute;left:100%;bottom:0px;white-space:nowrap;
+}
+.ScoreList >div i >span.UpShow{
+    bottom:100%;left:inherit;right:0px;
+}
+.ScoreList:nth-child(1) >div i{
+    background:#FCd22A;
+}
+.ScoreList:nth-child(2) >div i{
+    background:#3fadf9;
+}
+.ScoreList:nth-child(3) >div i{
+    background:#fa6c6c;
+}
+/**定损列表和减损列表**/
+.DSJSList{
+    font-size:0.3rem;
+}
+.DSnumandimg span{
+
+}/*
+.JSList{position:relative;width:30%;padding-top:10%;}
+.JSList:nth-child(1){
+    !*left:*!
+}
+.dSImg{
+    width:80%;height:0px;padding-bottom:80%;
+    position:relative;text-align:center;left:10%;
+}
+.dSImg:nth-child(1) span{
+    background:url(../../../img/jin@3x.png);
+    background-size:100% 100%;
+}
+.dSImg:nth-child(2) span{
+    background:url(../../../img/yin@3x.png);
+    background-size:100% 100%;
+}
+.dSImg:nth-child(3) span{
+    background:url(../../../img/tong@3x.png);
+    background-size:100% 100%;
+}
+.dSImg span{
+    position:absolute;bottom:100%;display:inline-block;
+    left:38%;width:30%;height:0px;padding-bottom:30%;
+}
+.dSImg img{
+    position:absolute;top:0px;left:0px;width:100%;height:100%;
+    border-radius:100%;
+}
+*/
+
+.DSTop{
+    background:#3a65df;
+    padding:0.3rem;
+}
+ .DSTopBox{
+    position:relative;
+    display:flex;
+     background:url(../../../newBuild/src/img/bggroud.png);
+     background-size:100% 100%;padding-top:0.4rem;/*要和皇冠位移一样*/
+}
+ .listBox{
+     position:relative;
+     width:0px;
+     flex:1;
+     font-size:0.25rem;
+ }
+.JSList{
+    padding:10% 25%;
+    padding-top:0.7rem;
+    text-align:center;
+}
+.listBox:nth-child(2) .JSList{
+    position:absolute;width:50%;top:-10%;
+    transform:scale(1.2,1.2);color:red;
+}
+.JSList p{padding-top:0.2rem;}
+.dSImg{
+    position:relative;border:2px solid red;border-radius:100%;
+}
+.dSImg img{position:absolute;top:0px;left:0px;width:100%;height:100%;border-radius:100%;}
+.listBox:nth-child(1) .dSImg{border:2px solid #E3E5E1;}
+.listBox:nth-child(1) .dSImg span{background:url(../../../newBuild/src/img/yin@3x.png);background-size:100% 100%;}
+.listBox:nth-child(2) .dSImg{border:2px solid #f6d643}
+.listBox:nth-child(2) .dSImg span{background:url(../../../newBuild/src/img/jin@3x.png);background-size:100% 100%;}
+.listBox:nth-child(3) .dSImg{border:2px solid #E9A861;}
+.listBox:nth-child(3) .dSImg span{background:url(../../../newBuild/src/img/tong@3x.png);background-size:100% 100%;}
+.dSImg span{
+    position:absolute;left:50%;margin-left:-0.35rem;width:0.7rem;height:0.7rem;top:-0.45rem;
+}
+
+.dSImg:after{
+    content:'';display:block;
+    width:100%;padding-top:100%;
+}
+
+.PtList {
+    display:flex;align-items: center;color:#545454;
+    border-bottom:1px solid #e9edf4;padding:0.16rem 0.2rem 0.16rem 0.2rem;
+}
+.myJfList{
+    position:fixed;width:100%;left:0px;bottom:0px;
+    background:#3a69df;;
+}
+.myJfList .PtList{
+    color:#fff;border:0px;
+}
+.PtList span:nth-child(1){width:0.3rem;padding:0 0.25rem;}
+.PtList >img{width:0.7rem;height:0.7rem;border-radius:100%;}
+.PtList span:nth-child(3){flex:1;width:1px;padding-left:0.2rem;}
+.PtList i{font-style:normal;}
+.PtList i.asc{
+    color:green;
+    transform:rotate(180deg);
+}
+.PtList i.desc{
+    color:red;
+    transform:rotate(0deg);
+}
+ .PtList i.same{
+     opacity:0;
+ }
+
+ .JSTopBox{
+    position:relative;
+    display:flex;margin-top:0.3rem;
+}
+.DSList{
+    padding:10% 10%;
+    text-align:center;
+    color:#fff;
+}
+.DSList p{padding-top:0.2rem;padding-bottom:0.08rem;font-size:0.25rem;}
+.listBox .DSList .dSImg span{top:77%;z-index:999;width:0.6rem;height:0.6rem;margin-left:-0.3rem;}
+.listBox:nth-child(1) .DSList .dSImg span{background:url(../../../newBuild/src/img/num2@3x.png);background-size:100% 100%;}
+.listBox:nth-child(2) .DSList .dSImg span{background:url(../../../newBuild/src/img/num1@3x.png);background-size:100% 100%;}
+.listBox:nth-child(3) .DSList .dSImg span{background:url(../../../newBuild/src/img/num3@3x.png);background-size:100% 100%;}
+.listBox .DSList .dSImg{border-radius:0px;border:0px;padding:9.4017094%;}
+.listBox .DSList .dSImg img{
+    border-radius:0px;border:0px;
+    width:81.1965811%;height:81.1965811%;left:9.4017094%;top:9.4017094%;
+}
+.listBox .DSList .dSImg:before{
+    content:'';position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:99;
+    background:url(../../../newBuild/src/img/bG6bian.png);background-size:100% 100%;
+}
+.listBox:nth-child(2) .DSList{
+    position:absolute;width:80%;top:-5%;
+    transform:scale(1.3,1.3);font-size:0.25rem;
+}
+.listBox:nth-child(2) .DSList p{
+    font-size:0.25rem;padding-bottom:0px;
+}
+
+/**案件退休按钮*/
+.DSYButton{
+    width:100%;height:1.2rem;
+}
+.DSYButton ul{
+    width:100%;height:1rem;
+    display:flex;align-items: center;background:#fff;
+    position:fixed;bottom:0px;z-index:99;
+    box-shadow: 0px 2px 8px #888888;
+}
+.DSYButton ul li{
+    flex:1;text-align:center;
+}
+.DSYButton ul li span{
+    display:inline-block;
+    width:1rem;height:1rem;
+    background:#fff;position:relative;top:-0.4rem;
+    border-radius:100%;box-shadow: 0px 2px 8px #888888;
+}
+.DSYButton ul li span:after{
+    content:'';display:inline-block;width:200%;height:120%;padding:0.1rem;
+    background:#fff;position:absolute;left:-50%;top:0.4rem;
+}
+.DSYButton ul li span:before{
+    content:'';display:inline-block;width:100%;height:100%;line-height:0.8rem;font-size:0.6rem;color:#fff;
+    background:url(../../../newBuild/src/img/dsy_main_tabcenter@3x.png); background-size:100% 100%;
+    left:0px;top:0px;position:relative;z-index:99;font-weight:300;
+    border-radius:100%;
+}
+.DSYButton ul li{position:relative;height:100%;font-size:0.4rem;color:#666;}
+.DSYButton ul li.on{
+    color: #4c8bf4;
+}
+.DSYButton ul li:before{
+    content:'';display:inline-block;
+    width:0.6rem;height:0.6rem;background:url('../../../newBuild/src/img/tabbar_home_icon.png');
+    background-size:100% 100%;margin-top:0.05rem;
+}
+.DSYButton ul li.toRecord.on:before{
+    background:url('../../../newBuild/src/img/tabbar_home_icon_selected.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.caseInfoes:before{display:none;}
+.DSYButton ul li.toHome:before{
+    background:url('../../../newBuild/src/img/tabbar_user_icon.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.toHome.on:before{
+    background:url('../../../newBuild/src/img/tabbar_user_icon_selected.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.toWXList:before{
+    background:url('../../../newBuild/src/img/tabbar_repair_icon.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.toWXList.on:before{
+    background:url('../../../newBuild/src/img/tabbar_repair_icon_selected.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.recovery:before{
+    background:url('../../../newBuild/src/img/cz-line2@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.recovery.on:before{
+    background:url('../../../newBuild/src/img/cz@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.caseInfo:before{
+    background:url('../../../newBuild/src/img/add@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.caseInfo.on:before{
+    background:url('../../../newBuild/src/img/add2bule@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.inquiry:before{
+    background:url('../../../newBuild/src/img/inquiry@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.map:before{
+    background:url('../../../newBuild/src/img/themap.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.inquiry.on:before{
+    background:url('../../../newBuild/src/img/inquiryblue@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li:after{
+    content:'';position:absolute;bottom:0.05rem;font-size:0.23rem;
+    width:100%;text-align:center;left:0px;
+}
+.DSYButton ul li.toPurchase.on:before{
+    background:url('../../images/gwcBlue@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.toPurchase:before{
+    background:url('../../images/gwchei@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.toPurchase:after{
+    content:'采购'
+}
+.DSYButton ul li.toRecord:after{
+     content:'首页'
+ }
+.DSYButton ul li.caseInfoes:after{
+    content:'推修';
+}
+.DSYButton ul li.toWXList:after{
+    content:'维修';
+}
+.DSYButton ul li.toHome:after{
+    content:'我的'
+}
+.DSYButton ul li.recovery:after{
+    content:'残件'
+}
+ .DSYButton ul li.caseInfo:after{
+     content:'推修'
+ }
+.DSYButton ul li.inquiry:after{
+   content:'询价'
+}
+.DSYButton ul li.map:after{
+    content:'地图'
+}
+
+.DSYButton ul li.purchase.on:before{
+    background:url('../../images/gwcBlue@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.purchase:before{
+    background:url('../../images/gwchei@3x.png');
+    background-size:100% 100%;
+}
+.DSYButton ul li.purchase:after{
+    content:'采购'
+}
+
+/**headerTab 推修列表顶部**/
+.headerTab{
+    position:relative;
+    height:0px;
+    transition: height 300ms;overflow:hidden;
+}
+.Reload,.loadMore{
+    display:none;
+    width:1rem;height:1rem;
+    position:absolute;left:50%;margin-left:-0.5rem;
+    background:url(../../../newBuild/src/img/lodingtop.png);
+    background-size:100% 100%;
+    animation:2s linear infinite CDturn;
+}

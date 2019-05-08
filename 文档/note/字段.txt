@@ -1,0 +1,30 @@
+reportNo		---- str	----报案号			必填
+lossNo			---- str	----定损单号			必填
+registPersion   	---- str	----推修人姓名			必填
+registPersionPhone	---- str	----推修人电			必填
+reportPersonName	---- str 	----车主姓名			必填
+reportMoblePhone	---- str	----车主电话			必填
+plateNo			---- str	----车牌号			必填
+repairType		---- bol 0, 1	----0选修1返修			必填
+tmxCarType 		---- bol 0，1	----0乘用车1商用车		必填
+tmxhavepjType		---- bol 0，1	----0无配件1有配件		必填
+taskType		---- 0202，0201	----0202三者车，0201车主	必填
+lossWay			----1，2	----1全权委托开拆，2到店别动	必填
+
+
+
+page2
+brandName		---- str	----车辆品牌名			必填
+brandId			---- str	----车辆品牌id
+importFlag
+brandCode
+brandInitial		----str		----车辆型号（自定义		
+VehicleModel
+vin			----str		----VIN码			必填
+xlcName			----str		----修理厂名称			必填
+xlcCode			----str		----修理厂id			必填
+
+
+checkPhotoes		----str		----勘察照片（自定义
+
+
