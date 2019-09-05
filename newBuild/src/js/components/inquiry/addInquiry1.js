@@ -388,12 +388,12 @@ this.setState({
             })
             this.props.ajax({
                 data:{token:this.props.user.data.token},
-                url:'/server/lexiu1-app/business/dictAddr/x/'+item.id,
+                url:'/server/lexiu1-app/business/dictAddr/x/'+item1.id,
                 suc:(data)=>{
                     console.log(data)
                     var qyList=[]
                     data.x.map((item1,index1)=>{
-                        qyList.push({CMC:item1.CSMC,id:item1.id,select:false})
+                        qyList.push({CXM:item1.CMX,id:item1.id,select:false})
                     })
                     this.setState({
                         submitDraw:true,
