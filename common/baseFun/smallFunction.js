@@ -325,7 +325,23 @@ var mtb=function(t){
                     }
                     return dom
                 },
-
+                ErrorShow1:(obj)=>{
+                    var dom;
+                    switch (obj.type){
+                        case 'p':
+                            dom=<p style={{textAlign:'center',lineHeight:'50px',background:'#f3f3f3',padding:'0.2rem'}}>{obj.content}</p>
+                            break;
+                        case 'zanwu':
+                            dom=<div style={{display:'flex',height:'50vh', flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
+                                <img src={require('../images/empty.png')} style={{width:'40vw'}} alt=""/>
+                                <span style={{padding:'10vw',fontSize:'0.3rem'}}>{obj.content}</span>
+                            </div>
+                            break;
+                        case 'baseLi':
+                            dom=<this.state.BaseLi data={[{key:obj.content}]}/>
+                    }
+                    return dom
+                },
                 //遍历dom
                 mapDom:(e)=>{
                     let isChild=false;

@@ -56,8 +56,12 @@
     display:inline-block;
     width:0.5rem;height:0.5rem;margin-right:0.2rem;
 }
-ul.icoLeft li:nth-child(1) span.imgIcon{
+/*ul.icoLeft li:nth-child(1) span.imgIcon{
     background:url('../img/jb-1@3x.png');
+    background-size:100% 100%;
+}*/
+ul.icoLeft li:nth-child(1) span.imgIcon{
+    background:url('../img/jf.png');
     background-size:100% 100%;
 }
 ul.icoLeft li:nth-child(2) span.imgIcon{

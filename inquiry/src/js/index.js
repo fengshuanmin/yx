@@ -11,6 +11,9 @@ import App from '../../../common/app'
 import Login from './components/Login'
 import Register from './components/register'
 import ReplacePsd from './components/replacepsd'
+// import PhoneCode from './components/home/phonecode'
+import MyPoint from './components/home/mypoints'
+import Intedetail from './components/home/intedetail'
 import CaseInfo from './components/caseInfo.js'
 import CheckPhotograph from './components/checkPhotograph.js'
 import VehicleInfo from './components/vehicleInfo.js'
@@ -154,6 +157,9 @@ class AppRouter extends React.Component {
                     <Route path="IntegralRecord" component={IntegralRecord}/>
                     <Route path="integral" component={Integral}/>
                     <Route path="jifen" component={JiFen}/>
+                    {/*<Route path="phonecode" component={PhoneCode}/>*/}
+                    <Route path="myPoint" component={MyPoint}/>
+                    <Route path="intedetail" component={Intedetail}/>
                     <Route path='detail' component={detail}>
                         <IndexRoute component={caseInfos}/>
                         <Route path='caseInfo' component={caseInfos}/>

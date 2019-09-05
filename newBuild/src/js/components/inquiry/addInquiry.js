@@ -10,6 +10,7 @@ export default class AddInquiry extends React.Component {
         this.state = {
             tmxCarType:0,
             engineNumber:'',
+            submitDraw:true,
             carInfo: [
                 {
                     typeName: 'tmxReportNo',
@@ -693,8 +694,7 @@ export default class AddInquiry extends React.Component {
         localStorage.setItem("VinInfo", JSON.stringify(this.state.VinInfo||{}));
     }
     render(){
-        console.log(this.state.SubmitData)
-        console.log(this.state.VinInfo)
+        console.log(this.state)
         return(
             <div onClick={this.closeDocument}>
                 <this.props.InfoTitle T={this} data={{key:'案件信息'}}/>
@@ -737,6 +737,58 @@ export default class AddInquiry extends React.Component {
                 {this.state.component &&
                     <SelectParts {...this.props} T={this}/>
                 }
+                <div className={this.state.submitDraw ? "partsBuyShow basicStyle" : "partsBuyHide basicStyle"}>
+                    <div className="qy" style={{overflow:'hidden'}}>
+                        <h4 className="checkqy1">
+                            <span style={{width:'1rem'}} onClick={this.quxiao}>取消</span>
+                            <span style={{flex:'1'}}>请选择配件商所在地</span>
+                            <span style={{width:'1rem'}} onClick={this.submit}>确定</span>
+                        </h4>
+                        <p className="sfp">
+                            <span className="qytitle" onClick={this.sfdiv}>{this.state.sfval||'请选择'}</span>
+                            {this.state.sfval?<span onClick={this.sqdiv} className="qytitle">{this.state.sqval||'请选择'}</span>:''}
+                            {this.state.sqval?<span className="qytitle">{this.state.qyval||'请选择'}</span>:''}
+                        </p>
+                        <div style={{flex:1,position:'relative',overflow:'hidden'}}>
+                            <ul className={this.state.checksf?'sfdiv':'sfdivnone'}
+                                onTouchEnd={this.touchs.bind(this,'end')}
+                                onTouchMove={this.touchs.bind(this,'move')}
+                                onTouchStart={this.touchs.bind(this,'start')}
+                                style={{overflow:'hidden',position:'absolute',width:'100%'}}
+                            >
+                                {this.state.sfList&&this.state.sfList.map((item,index)=>{
+                                    return(
+                                        <li className="lilist" key={index} onClick={this.sfList.bind(this,item)}>{item.SFMC}</li>
+                                    )
+                                })}
+                            </ul>
+                            <ul className={this.state.checksq?'sfdiv':'sfdivnone'}
+                                onTouchEnd={this.touchs.bind(this,'end')}
+                                onTouchMove={this.touchs.bind(this,'move')}
+                                onTouchStart={this.touchs.bind(this,'start')}
+                                style={{overflow:'hidden',position:'absolute',width:'100%'}}
+                            >
+                                {this.state.sqList&&this.state.sqList.map((item1,index1)=>{
+                                    return(
+                                        <li className="lilist" key={index1} onClick={this.sqList.bind(this,item1)}>{item1.CSMC}</li>
+                                    )
+                                })}
+                            </ul>
+                            <ul className={this.state.checkqy?'sfdiv':'sfdivnone'}
+                                onTouchEnd={this.touchs.bind(this,'end')}
+                                onTouchMove={this.touchs.bind(this,'move')}
+                                onTouchStart={this.touchs.bind(this,'start')}
+                                style={{overflow:'hidden',position:'absolute',width:'100%'}}
+                            >
+                                {this.state.qyList&&this.state.qyList.map((item2,index2)=>{
+                                    return(
+                                        <li className="lilist" key={index2} onClick={this.qyList.bind(this,item2)}>{item2.XMC}</li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

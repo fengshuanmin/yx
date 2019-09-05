@@ -73,27 +73,7 @@ input,button{outline:none;}
     background-size:100%;
     background-position:center center;
 }
-.closecode{
-    display: inline-block;
-    width: 0.4rem;
-    height: 0.4rem;
-    background:url('../img/closecode.png') no-repeat;
-    background-size: contain;
-}
-.jf{
-    display: inline-block;
-    width: 0.4rem;
-    height: 0.4rem;
-    background:url('../img/back.png') no-repeat;
-    background-size: contain;
-    margin-left: 0.2rem;
-}
-.titjf{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding-top: 0.2rem;
-}
+
 .submitLogin{
     width:89.33333vw;margin:auto;padding-top:12.26666vw;
 }
@@ -130,4 +110,25 @@ input,button{outline:none;}
     background:#fff;
     padding:0.2rem 0.2rem 0;
     margin-left:0;
+}
+.closecode{
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    background:url('../img/closecode.png') no-repeat;
+    background-size: contain;
+}
+.jf{
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    background:url('../img/back.png') no-repeat;
+    background-size: contain;
+    margin-left: 0.2rem;
+}
+.titjf{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.2rem;
 }

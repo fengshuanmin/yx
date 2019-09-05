@@ -156,25 +156,51 @@ const Quote = React.createClass({
         console.log(this.state.dataList.result.enquiryQuoteParts)
         let item = this.state.dataList.result.enquiryQuoteParts;
         let items = []
-        for (let i = 0; i < item.length; i++) {
+        // for (let i = 0; i < item.length; i++) {
+        //     console.log(item)
+        //     items.push(
+        //         <div className="quotePart" key={i} onClick={this.toItem.bind(this, {
+        //             "partName": item[i].fact_part_name,
+        //             "taskId": this.props.location.state,
+        //             "reMark": item[i].remark,
+        //             "spareTypeName": item[i].spareTypeName,
+        //             "price": item[i].price,
+        //             'businessName': item[i].business_name,
+        //             "num": item[i].part_num,
+        //             "id":item[i].id,
+        //             "yhId":this.props.project.user.data.LxAqYhxxb.id,
+        //             partId:item[i].partId
+        //         })}>
+        //             <span style={{width: '1.4rem'}}>{item[i].fact_part_name}</span>
+        //             <span style={{width: '1.6rem'}}>{item[i].partsCompany}</span>
+        //             <span style={{width: '1.5rem'}}>{item[i].partSpareType}</span>
+        //             <span style={{width: '.6rem'}}>{item[i].partNum}</span>
+        //             <span style={{width: '1.5rem'}}>{item[i].partPrice != '' ? ('￥' + item[i].partPrice) : ''}</span>
+        //             <span><svg aria-hidden="true" className="icon">
+        //                     <use xlinkHref={'#icon-iconfontyoujiantou'}></use>
+        //                 </svg></span>
+        //         </div>
+        //     )
+        // }
+        for (let i = 0; i < item[0].enquiryPatrs.length; i++) {
             items.push(
                 <div className="quotePart" key={i} onClick={this.toItem.bind(this, {
-                    "partName": item[i].fact_part_name,
+                    "partName": item[0].enquiryPatrs[i].fact_part_name,
                     "taskId": this.props.location.state,
-                    "reMark": item[i].remark,
-                    "spareTypeName": item[i].spareTypeName,
-                    "price": item[i].price,
-                    'businessName': item[i].business_name,
-                    "num": item[i].part_num,
-                    "id":item[i].id,
+                    "reMark": item[0].enquiryPatrs[i].remark,
+                    "spareTypeName": item[0].enquiryPatrs[i].spareTypeName,
+                    "price": item[0].enquiryPatrs[i].price,
+                    'businessName': item[0].enquiryPatrs[i].business_name,
+                    "num": item[0].enquiryPatrs[i].part_num,
+                    "id":item[0].enquiryPatrs[i].id,
                     "yhId":this.props.project.user.data.LxAqYhxxb.id,
-                    partId:item[i].partId
+                    partId:item[0].enquiryPatrs[i].partId
                 })}>
-                    <span style={{width: '1.4rem'}}>{item[i].fact_part_name}</span>
-                    <span style={{width: '1.6rem'}}>{item[i].partsCompany}</span>
-                    <span style={{width: '1.5rem'}}>{item[i].partSpareType}</span>
-                    <span style={{width: '.6rem'}}>{item[i].partNum}</span>
-                    <span style={{width: '1.5rem'}}>{item[i].partPrice != '' ? ('￥' + item[i].partPrice) : ''}</span>
+                    <span style={{width: '1.4rem'}}>{item[0].enquiryPatrs[i].fact_part_name}</span>
+                    <span style={{width: '1.5rem'}}>{item[0].enquiryPatrs[i].partsCompany}</span>
+                    <span style={{width: '1.5rem'}}>{item[0].enquiryPatrs[i].partSpareType}</span>
+                    <span style={{width: '.6rem'}}>{item[0].enquiryPatrs[i].partNum}</span>
+                    <span style={{width: '1.5rem'}}>{item[0].enquiryPatrs[i].partPrice != '' ? ('￥' + item[0].enquiryPatrs[i].partPrice) : ''}</span>
                     <span><svg aria-hidden="true" className="icon">
                             <use xlinkHref={'#icon-iconfontyoujiantou'}></use>
                         </svg></span>

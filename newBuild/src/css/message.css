@@ -17,3 +17,8 @@
     background-color: #F5F5F5;
     box-shadow: none;
 }
+.fontcolor span{
+    height: 0.6rem;
+    line-height: 0.6rem;
+    color: red!important;
+}

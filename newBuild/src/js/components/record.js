@@ -244,18 +244,20 @@ const Record = React.createClass({
                 url:'/server/lexiu3-app/business/tmxcadvertinfo/applist',
                 data:{showType:'2',showPoint:'1',showRoleType:'1',showChannel:'3'},
                 suc:(data)=>{
-                    if(data.tmxcAdvertInfoList.length>0){
-                        this.props.setProps({
-                            adver:'0'
-                        })
-                        this.setState({
-                            adver:1,
-                            ulr:data.tmxcAdvertInfoList[0].adPic,
-                            locationUrl:data.tmxcAdvertInfoList[0].locationUrl,
-                            locationTitle:data.tmxcAdvertInfoList[0].locationTitle
-                        })
-                    }
                     console.log(data)
+                    if(data.code=='0'){
+                        if(data.tmxcAdvertInfoList.length>0){
+                            this.props.setProps({
+                                adver:'0'
+                            })
+                            this.setState({
+                                adver:1,
+                                ulr:data.tmxcAdvertInfoList[0].adPic,
+                                locationUrl:data.tmxcAdvertInfoList[0].locationUrl,
+                                locationTitle:data.tmxcAdvertInfoList[0].locationTitle
+                            })
+                        }
+                    }
                 }
             })
         }

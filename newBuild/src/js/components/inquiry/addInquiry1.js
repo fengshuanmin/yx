@@ -18,7 +18,8 @@ export default class AddInquiry extends React.Component {
             engineNumber:'',
             imgList:[],
             requestFrom:'WEIXIN',
-            showYXZ:true
+            showYXZ:true,
+            submitDraw:false
         };
         this.cyccx=()=>{
             this.setState({
@@ -139,9 +140,23 @@ export default class AddInquiry extends React.Component {
             this.setState({carInfo:carInfo,SubmitData:SubmitData},()=>{
                 // console.log(this.state.SubmitData)
             })
-        },
+        }
+        this.close=()=>{
+            console.log('123')
+            this.setState({
+                adver:0
+            })
+            this.props.history.replaceState('null', '/inquiry')
+        }
+        this.linkurl=()=>{
+            this.setState({
+                adver:'0'
+            })
+            console.log(this.state)
+            this.props.history.replaceState({locationUrl:this.state.locationUrl,locationTitle:this.state.locationTitle},'/inquiry/windurl')
+        }
         this.submit = () => {
-            var datailedList = this.state.datailedList || {}, partList = []
+           /* var datailedList = this.state.datailedList || {}, partList = []
             for (var i in datailedList) {
                 partList.push({
                     partNum: datailedList[i].num,
@@ -176,6 +191,12 @@ export default class AddInquiry extends React.Component {
                 })
                 return;
             }
+            if(this.state.imgList.length==0){
+                this.props.promptInfo({
+                    content: '请上传至少一张车头、车尾或配件照片', Prompt: true
+                })
+                return;
+            }
             var requestDate = {
                 ...(this.state.reportData || {}),
                 "familyAbbr":this.state.SubmitData.familyName||'',
@@ -188,14 +209,8 @@ export default class AddInquiry extends React.Component {
                 "vin":this.state.vin,
                 "requestFrom":this.state.requestFrom
             }
-            console.log(requestDate)
-            if(this.state.imgList.length==0){
-                this.props.promptInfo({
-                    content: '请上传至少一张车头、车尾或配件照片', Prompt: true
-                })
-                return;
-            }
-            !this.props.PromptData.content && !this.props.PromptData.loading&&
+            console.log(requestDate)*/
+            /*!this.props.PromptData.content && !this.props.PromptData.loading&&
             this.props.promptInfo({
                 content:'是否发起询价？',
                 Prompt:true,
@@ -206,11 +221,91 @@ export default class AddInquiry extends React.Component {
                         url: '/lexiugo-app/app/enquiry/addEnquiry',
                         suc: (dat) => {
                             if (dat.errorCode == '0000') {
-                               /* localStorage.setItem("PJAdd", '')
+                               /!* localStorage.setItem("PJAdd", '')
                                 localStorage.setItem("PJAddjj", '')
                                 localStorage.setItem("SubmitData", '');
                                 localStorage.setItem("VinInfo", '');
-                                localStorage.setItem("imgList", '');*/
+                                localStorage.setItem("imgList", '');*!/
+                                this.props.setProps({
+                                    inquiryData:false,
+                                    PJAdd:false,
+                                    addinquiry:false
+                                });
+                                this.props.promptInfo({
+                                    content: dat.errorMsg, Prompt: true, onlyOK: true, fun: () => {
+                                        this.props.ajax({
+                                            url:'/server/lexiu3-app/business/tmxcadvertinfo/applist',
+                                            data:{showType:'2',showPoint:'2',showRoleType:'1',showChannel:'3'},
+                                            suc:(data)=>{
+                                                console.log(data)
+                                                if(data.tmxcAdvertInfoList.length>0){
+                                                    this.setState({
+                                                        adver:1,
+                                                        ulr:data.tmxcAdvertInfoList[0].adPic,
+                                                        locationUrl:data.tmxcAdvertInfoList[0].locationUrl,
+                                                        locationTitle:data.tmxcAdvertInfoList[0].locationTitle
+                                                    })
+                                                }else{
+                                                    this.props.history.replaceState('null', '/inquiry')
+                                                }
+                                            }
+                                        })
+                                        // this.props.history.replaceState('null', '/inquiry');
+                                        this.props.promptInfo()
+                                    }
+                                })
+                            } else {
+                                this.props.promptInfo({content: dat.errorMsg, Prompt: true, onlyOK: true})
+                            }
+                        }
+                    })
+
+                }
+            })*/
+            console.log(this.props)
+            this.props.ajax({
+               data:{userId:this.props.user.data.LxAqYhxxb.id},
+               url:'toumingxiu/insEnquiry/getEnquiryArea.do',
+               suc:(data)=>{
+console.log(data)
+                   var sfList=[]
+                   data.data.areaList.map((item1,index1)=>{
+                       sfList.push({provinceName:item1.provinceName,provinceId:item1.provinceId,zzid:item1.zzid,select:false})
+                   })
+                   this.setState({
+                       submitDraw:true,
+                       checksf:true,
+                       sfList:sfList
+                   })
+               }
+            })
+        }
+        this.quxiao=()=>{
+this.setState({
+    submitDraw:false
+})
+        }
+        this.sure=()=>{
+            var requestDate1 = {
+                ...(this.state.requestDate || {}),
+                inquiryArea:this.state.inquiryArea||''
+            }
+            !this.props.PromptData.content && !this.props.PromptData.loading&&
+            this.props.promptInfo({
+                content:'是否发起询价？',
+                Prompt:true,
+                fun:()=>{
+                    this.props.ajax({
+                        loading: true,
+                        data: {requestData: JSON.stringify(requestDate1)},
+                        url: '/lexiugo-app/app/enquiry/addEnquiry',
+                        suc: (dat) => {
+                            if (dat.errorCode == '0000') {
+                                /* localStorage.setItem("PJAdd", '')
+                                 localStorage.setItem("PJAddjj", '')
+                                 localStorage.setItem("SubmitData", '');
+                                 localStorage.setItem("VinInfo", '');
+                                 localStorage.setItem("imgList", '');*/
                                 this.props.setProps({
                                     inquiryData:false,
                                     PJAdd:false,
@@ -247,21 +342,88 @@ export default class AddInquiry extends React.Component {
 
                 }
             })
+        }
+        this.sfdiv=()=>{
 
         }
-        this.close=()=>{
-            console.log('123')
-            this.setState({
-                adver:0
-            })
-            this.props.history.replaceState('null', '/inquiry')
+        this.sqdiv=()=>{
+
         }
-        this.linkurl=()=>{
-            this.setState({
-                adver:'0'
+        this.sfList=(item)=>{
+        console.log('sjdcbsj')
+            this.state.sfList.map((item2,index2)=>{
+                if(item2.provinceName==item.provinceName){
+                    item2.select=true
+                }else{
+                    item2.select=false
+                }
             })
-            console.log(this.state)
-            this.props.history.replaceState({locationUrl:this.state.locationUrl,locationTitle:this.state.locationTitle},'/inquiry/windurl')
+            this.props.ajax({
+                data:{token:this.props.user.data.token},
+                url:'/server/lexiu1-app/business/dictAddr/cs/'+item.provinceId,
+                suc:(data)=>{
+                    console.log(data)
+                    var csList=[]
+                    data.cs.map((item1,index1)=>{
+                        csList.push({CSMC:item1.CSMC,id:item1.id,select:false})
+                    })
+                    this.setState({
+                        submitDraw:true,
+                        checksf:false,
+                        checksq:true,
+                        sqList:csList,
+                        sfList:this.state.sfList
+                    })
+                }
+            })
+        }
+        this.sqList=(item1)=>{
+            console.log(item1)
+            this.state.sqList.map((item2,index2)=>{
+                if(item2.CSMC==item1.CSMC){
+                    item2.select=true
+                }else{
+                    item2.select=false
+                }
+            })
+            this.props.ajax({
+                data:{token:this.props.user.data.token},
+                url:'/server/lexiu1-app/business/dictAddr/x/'+item.id,
+                suc:(data)=>{
+                    console.log(data)
+                    var qyList=[]
+                    data.x.map((item1,index1)=>{
+                        qyList.push({CMC:item1.CSMC,id:item1.id,select:false})
+                    })
+                    this.setState({
+                        submitDraw:true,
+                        checksf:false,
+                        checkqy:true,
+                        qyList:qyList,
+                        sqList:this.state.sqList
+                    })
+                }
+            })
+        }
+        this.touchs=(m,e)=>{
+            switch(m){
+                case 'start':
+                    this.props.touchStarts(e,this);
+                    break;
+                case 'end':
+                    this.props.touchEnds(e,this);
+                    break;
+                case 'move':
+                    e.preventDefault();e.stopPropagation();
+                    this.props.touchMoves(e,this);
+                    var e= window.e || e
+                    if(document.all){
+                        e.returnValue = false;
+                    }else{
+                        e.preventDefault();
+                    }
+                    break;
+            }
         }
     }
     componentDidMount() {
@@ -363,8 +525,6 @@ export default class AddInquiry extends React.Component {
     //
     // }
     render(){
-        console.log(this.state)
-        console.log(this.props)
         return(
             <div onClick={this.closeDocument} className="adddiv">
                 <this.props.InfoTitle T={this} data={{key:'案件信息'}}/>
@@ -464,6 +624,66 @@ export default class AddInquiry extends React.Component {
                 {this.state.component &&
                 <SelectParts {...this.props} T={this}/>
                 }
+                <div className={this.state.submitDraw ? "partsBuyShow basicStyle" : "partsBuyHide basicStyle"}>
+                    <div className="qy" style={{overflow:'hidden'}}>
+                        <h4 className="checkqy1">
+                            <span style={{width:'1rem',color:'#8B8B8B'}} onClick={this.quxiao}>取消</span>
+                            <span style={{flex:'1'}}>请选择配件商所在地</span>
+                            <span style={{width:'1rem',color:'#6188F0'}} onClick={this.sure}>确定</span>
+                        </h4>
+                        <p className="sfp">
+                            <span className="qytitle" onClick={this.sfdiv}>{this.state.sfval||'请选择'}</span>
+                            {this.state.sfval?<span onClick={this.sqdiv} className="qytitle">{this.state.sqval||'请选择'}</span>:''}
+                            {this.state.sqval?<span className="qytitle">{this.state.qyval||'请选择'}</span>:''}
+                        </p>
+                        <div style={{flex:1,position:'relative',overflow:'hidden'}}>
+                            <ul className={this.state.checksf?'sfdiv':'sfdivnone'}
+                                onTouchEnd={this.touchs.bind(this,'end')}
+                                onTouchMove={this.touchs.bind(this,'move')}
+                                onTouchStart={this.touchs.bind(this,'start')}
+                                style={{overflow:'hidden',position:'absolute',width:'100%'}}
+                            >{this.state.sfList&&this.state.sfList.map((item,index)=>{
+                                    return(
+                                        item.select==true?<li className="lilist areali" style={{background:'#EEEEEE'}} key={index} onClick={this.sfList.bind(this,item)}>
+                                            <span>{item.provinceName}</span>
+                                            <span style={{marginRight:'0.2rem',width:'0.36rem',height:'0.32rem',
+                                                backgroundSize:'contain',backgroundImage:'url('+require('../../../img/duihao.png')+')',float:'right'}}></span>
+                                        </li>:<li className="lilist areali" key={index} onClick={this.sfList.bind(this,item)}>
+                                            <span>{item.provinceName}</span></li>
+                                    )
+                                })}</ul>
+                            <ul className={this.state.checksq?'sfdiv':'sfdivnone'}
+                                onTouchEnd={this.touchs.bind(this,'end')}
+                                onTouchMove={this.touchs.bind(this,'move')}
+                                onTouchStart={this.touchs.bind(this,'start')}
+                                style={{overflow:'hidden',position:'absolute',width:'100%'}}
+                            >
+                                {this.state.sqList&&this.state.sqList.map((item1,index1)=>{
+                                    return(
+                                        item1.select==true?<li className="lilist areali" style={{background:'#EEEEEE'}} key={index1} onClick={this.sqList.bind(this,item1)}>
+                                            <span>{item1.CSMC}</span>
+                                            <span style={{marginRight:'0.2rem',width:'0.36rem',height:'0.32rem',
+                                                backgroundSize:'contain',backgroundImage:'url('+require('../../../img/duihao.png')+')',float:'right'}}></span>
+                                        </li>:<li className="lilist areali" key={index1} onClick={this.sqList.bind(this,item1)}>
+                                            <span>{item1.CSMC}</span></li>
+                                    )
+                                })}
+                            </ul>
+                            <ul className={this.state.checkqy?'sfdiv':'sfdivnone'}
+                                onTouchEnd={this.touchs.bind(this,'end')}
+                                onTouchMove={this.touchs.bind(this,'move')}
+                                onTouchStart={this.touchs.bind(this,'start')}
+                                style={{overflow:'hidden',position:'absolute',width:'100%'}}
+                            >
+                                {this.state.qyList&&this.state.qyList.map((item2,index2)=>{
+                                    return(
+                                        <li className="lilist" key={index2} onClick={this.qyList.bind(this,item2)}>{item2.XMC}</li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div className={this.state.adver&&this.state.adver==1 ? "partsBuyShow basicStyle1" : "partsBuyHide basicStyle1"}>
                     <div className="adverdiv">
                         {this.state.locationUrl? <span onClick={this.linkurl} style={{cursor:'pointer'}}>

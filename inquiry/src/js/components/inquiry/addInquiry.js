@@ -261,62 +261,62 @@ export default class AddInquiry extends React.Component {
             })
         }
         this.Sure=()=>{
-            var datailedList = this.state.datailedList || {}, partList = []
-            for (var i in datailedList) {
-                partList.push({
-                    partNum: datailedList[i].num,
-                    partStandard: datailedList[i].data.name,
-                    partRemark: datailedList[i].text,
-                    factPartCode: datailedList[i].data.id
-                })
-            }
-            if($('input[name=vin]').val()==''){
-                this.props.promptInfo({
-                    content: '请填写车架号', Prompt: true
-                })
-                return;
-            }
-            if(!this.state.vehicleName){
-                this.props.promptInfo({
-                    content: '请解析车架号', Prompt: true
-                })
-                return;
-            }
-            if(this.state.tmxCarType=='1'){
-                if(!this.state.engineNumber){
-                    this.props.promptInfo({
-                        content: '请填写发动机号', Prompt: true
-                    })
-                    return;
-                }
-            }
-            if (partList.length < 1) {
-                this.props.promptInfo({
-                    content: '你至少需要选择一个零件！', Prompt: true
-                })
-                return;
-            }
-            var requestDate = {
-                ...(this.state.reportData || {}),
-                "familyAbbr":this.state.SubmitData.familyName||'',
-                "partList": partList,
-                ...(this.state.SubmitData || {}),
-                tmxCarType:this.state.tmxCarType,
-                engineNumber:this.state.engineNumber||'',
-                tmxReportNo:this.state.tmxReportNo,
-                plateNo:this.state.plateNo,
-                vin:this.state.vin,
-                "requestFrom":this.state.requestFrom
-            }
-            this.setState({
-                requestDate:requestDate
-            })
-            if(this.state.imgList.length==0){
-                this.props.promptInfo({
-                    content: '请上传至少一张车头、车尾或配件照片', Prompt: true
-                })
-                return;
-            }
+            // var datailedList = this.state.datailedList || {}, partList = []
+            // for (var i in datailedList) {
+            //     partList.push({
+            //         partNum: datailedList[i].num,
+            //         partStandard: datailedList[i].data.name,
+            //         partRemark: datailedList[i].text,
+            //         factPartCode: datailedList[i].data.id
+            //     })
+            // }
+            // if($('input[name=vin]').val()==''){
+            //     this.props.promptInfo({
+            //         content: '请填写车架号', Prompt: true
+            //     })
+            //     return;
+            // }
+            // if(!this.state.vehicleName){
+            //     this.props.promptInfo({
+            //         content: '请解析车架号', Prompt: true
+            //     })
+            //     return;
+            // }
+            // if(this.state.tmxCarType=='1'){
+            //     if(!this.state.engineNumber){
+            //         this.props.promptInfo({
+            //             content: '请填写发动机号', Prompt: true
+            //         })
+            //         return;
+            //     }
+            // }
+            // if (partList.length < 1) {
+            //     this.props.promptInfo({
+            //         content: '你至少需要选择一个零件！', Prompt: true
+            //     })
+            //     return;
+            // }
+            // var requestDate = {
+            //     ...(this.state.reportData || {}),
+            //     "familyAbbr":this.state.SubmitData.familyName||'',
+            //     "partList": partList,
+            //     ...(this.state.SubmitData || {}),
+            //     tmxCarType:this.state.tmxCarType,
+            //     engineNumber:this.state.engineNumber||'',
+            //     tmxReportNo:this.state.tmxReportNo,
+            //     plateNo:this.state.plateNo,
+            //     vin:this.state.vin,
+            //     "requestFrom":this.state.requestFrom
+            // }
+            // this.setState({
+            //     requestDate:requestDate
+            // })
+            // if(this.state.imgList.length==0){
+            //     this.props.promptInfo({
+            //         content: '请上传至少一张车头、车尾或配件照片', Prompt: true
+            //     })
+            //     return;
+            // }
             this.setState({
                 submitDraw:true,
                 isOpen:true
@@ -412,6 +412,7 @@ export default class AddInquiry extends React.Component {
             })
         }else{this.props.ajax({
             url:'/toumingxiu/insEnquiry/getEnquiryArea.do',
+            data:{userId:this.props.user.data.LxAqYhxxb.id},
             loading:true,
             suc:(dat)=>{
                 if(dat.errorCode=='000000'){

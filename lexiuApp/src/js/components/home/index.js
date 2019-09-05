@@ -188,7 +188,7 @@ export default class CarList extends React.Component {
                                 <span style={{float:'right',position:'relative',display:'table-cell',verticalAlign:'middle'}}>
                                     {this.state.mesglistsize>0?<span className="mesbacredq">
                                         {this.state.mesglistsize}</span>:''}
-                                    <span className="iconfonts">&#xe607;</span>
+                                    {/*<span className="iconfonts">&#xe607;</span>*/}
                                 </span>
                             </div>
                         </div>

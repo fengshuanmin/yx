@@ -18,9 +18,9 @@ export default class List extends React.Component {
             var dat=[]
             if(datas && datas.code=='0') {
                 dat = (datas.page.list && datas.page.list) || [], im = im || 'bm'
-                var datArr = {
-                    bm: {datArr: ['plateNo', 'cxmc'], path: '/inquiry/info'}
-                }
+                // var datArr = {
+                //     bm: {datArr: ['plateNo', 'cxmc'], path: '/inquiry/info'}
+                // }
             }
             var newData;
             switch(type){

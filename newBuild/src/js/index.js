@@ -53,6 +53,9 @@ var Erweima=require('./components/dingdan/erweima')
 
 import Integral from '../../../integral/components/home'
 import JiFen from '../../../integral/components/jifen'
+import PhoneCode from './components/home/phonecode'
+import MyPoint from './components/home/mypoints'
+import Intedetail from './components/home/intedetail'
 import Details from './components/details.js'
 import ChangePosword from './components/home/changePosword.js'
 import loseInfo from './components/loseInfo'
@@ -145,6 +148,9 @@ class AppRouter extends React.Component {
                     <Route path="message" component={message}/>
                     <Route path="newsurl" component={newsurl}/>
                     <Route path="integral" component={Integral}/>
+                    <Route path="phonecode" component={PhoneCode}/>
+                    <Route path="myPoint" component={MyPoint}/>
+                    <Route path="intedetail" component={Intedetail}/>
                     <Route path="jifen" component={JiFen}/>
                     <Route path="record" component={Record}/>
                     <Route path="record1" component={Record1}/>
